@@ -22,6 +22,13 @@ public class UkuranFile {
         double mega_Byte = ukuran_File / SATU_KB / SATU_KB;
         double giga_Byte = ukuran_File / SATU_KB / SATU_KB / SATU_KB;
 
+        int mega_Byte_Bulat = (int) Math.round(mega_Byte);
+        // Membulatkan nilai mega_Byte ke bilangan terdekat dan mengubah hasilnya dari long menjadi int.
+        // untuk tipe data double perintah "Math.round" menghasilkan long, sehingga diperlukan (int) untuk memerintahkan
+        // secara eksplisit bahwa kita ingin menyimpan hasil ke int
+        double selisih = Math.abs(mega_Byte_Bulat - mega_Byte);
+        // Menghitung selisih antara nilai MB yang sudah dibulatkan dengan nilai MB asli, lalu Math.abs() membuat hasil selisih selalu positif.
+
         System.out.println("==== UKURAN FILE ====");
         System.out.println(nama_File);
         System.out.println(kilo_Byte);
