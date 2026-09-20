@@ -11,6 +11,14 @@ public class UkuranFile {
         System.out.print("Masukkan Nama File: ");
         String nama_File = scanner.nextLine();
 
+        //selama nama file tidak diakhiri .mp4, lakukan perulangan
+        while (!nama_File.endsWith(".mp4")) {
+            System.out.print("Nama file harus diakhiri dengan .mp4! Masukkan ulang: ");
+            nama_File = scanner.nextLine();
+        }
+        // while menjalankan perulangan selama bernilai true
+        //endswith. digunakan untuk mengecek apakah user mengakhiri kalimat sesuai yang kita inginkan
+
         System.out.print("Masukkan Ukuran File (byte): ");
         long ukuran_File = scanner.nextLong();
         //Exception in thread "main" java.util.InputMismatchException: For input string: "12345678901234567890"
