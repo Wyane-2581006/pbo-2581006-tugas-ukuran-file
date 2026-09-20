@@ -11,7 +11,7 @@ public class UkuranFile {
         System.out.print("Masukkan Nama File: ");
         String nama_File = scanner.nextLine();
 
-        System.out.println("Masukkan Ukuran File: ");
+        System.out.print("Masukkan Ukuran File: ");
         long ukuran_File = scanner.nextLong();
         //Exception in thread "main" java.util.InputMismatchException: For input string: "12345678901234567890"
         //	at java.base/java.util.Scanner.nextInt(Scanner.java:2273)
@@ -30,10 +30,12 @@ public class UkuranFile {
         // Menghitung selisih antara nilai MB yang sudah dibulatkan dengan nilai MB asli, lalu Math.abs() membuat hasil selisih selalu positif.
 
         System.out.println("==== UKURAN FILE ====");
-        System.out.println(nama_File);
-        System.out.println(kilo_Byte);
-        System.out.println(mega_Byte);
-        System.out.println(giga_Byte);
+        System.out.println("Nama File : " + nama_File);
+        System.out.println("Ukuran KB : " + kilo_Byte);
+        System.out.println("Ukuran MB : " + mega_Byte);
+        System.out.println("Ukuran GB : " + giga_Byte);
+        System.out.println("MB Bulat  : " + mega_Byte_Bulat);
+        System.out.println("Selisih   : " + selisih);
 
     }
 }
